@@ -1,0 +1,1165 @@
+/*
+* @package      Style
+* @description  This package holds all common style declarations
+*               of the site
+*/
+@import "_variables.scss";
+@import "includes/_mixins.scss";
+@import "includes/_normalize.scss";
+@import "includes/_page-layouts.scss";
+@import "includes/tm-grid/_tm-grid.scss";
+
+/*
+* @section      Main Styles
+* @description  This section holds template default elements style declarations
+*/
+
+html {
+  font-size: 60px;
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-md-min - 1) {
+    font-size: 70px;
+  }
+
+  @media (min-width: $screen-md-min) and (max-width: $screen-lg-min - 1) {
+    font-size: 80px;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    font-size: 100px;
+  }
+
+  .old-ie {
+    display: none;
+  }
+
+  &.lt-ie11 {
+    .old-ie {
+      display: block;
+    }
+  }
+}
+
+body {
+  font-family: $default-font-family;
+  font-weight: $default-font-weight;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-text-size-adjust: none;
+  color: $content-color;
+  background: $content-bg;
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-md-min - 1) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    font-size: $default-font-size;
+    line-height: $default-line-height;
+  }
+}
+
+/*
+* @subsection   Typography
+* @description  Describes default font settings for basic html elements and
+*               css classes
+*/
+
+h1, h2, h3, h4, h5, h6,
+.heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+  display: block;
+  color: $primary;
+
+  a:hover {
+    color: $secondary;
+  }
+}
+
+h1, .heading-1 {
+  font-size: 38px;
+  line-height: 1.33;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 60px;
+    line-height: 1.16;
+  }
+  @media (min-width: $screen-md-min) {
+    font-size: 70px;
+    line-height: (90/70);
+  }
+}
+
+h2, .heading-2 {
+  font-size: 34px;
+  line-height: 1.5;
+  @media (min-width: $screen-sm-min) {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  @media (min-width: $screen-md-min) {
+    font-size: 50px;
+  }
+  > .heading-3 {
+    line-height: 50px;
+  }
+}
+
+h3, .heading-3 {
+  font-size: 30px;
+  line-height: 1.5;
+  color: $mine-shaft;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 30px;
+    line-height: inherit;
+  }
+  @media (min-width: $screen-md-min) {
+    font-size: 40px;
+  }
+}
+
+h4, .heading-4 {
+  font-size: 26px;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 36px;
+    line-height: 1.47;
+  }
+}
+
+h5, .heading-5 {
+  font-size: 22px;
+
+  @media (min-width: $screen-sm-min) {
+    line-height: 1.66;
+  }
+  @media (min-width: $screen-md-min) {
+    font-size: 24px;
+    line-height: (40/24);
+  }
+}
+
+h6, .heading-6 {
+  font-size: 16px;
+  @media (min-width: $screen-sm-min) {
+    line-height: 1.5;
+  }
+  @media (min-width: $screen-md-min) {
+    line-height: 1.2;
+  }
+}
+
+p, .list, .contact-info {
+}
+
+small, .small {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+big, .big {
+  display: block;
+  font-size: 50px;
+  line-height: 1.2;
+  @media (min-width: $screen-lg-min) {
+    display: inline-block;
+  }
+
+}
+
+time {
+}
+
+hr {
+}
+
+/*
+* @section      Main Layout
+* @description  This section holds class declarations for elements indent creation
+*/
+
+/*
+* @subsection   Offsets
+* @description  Describes vertical indentation between the elements
+*/
+
+* + h1 {
+}
+
+* + h2 {
+}
+
+* + h3 {
+}
+
+* + h4 {
+}
+
+* + h5 {
+  margin-top: 20px;
+  @media (min-width: $screen-md-min) {
+    margin-top: 30px;
+  }
+}
+
+* + h6 {
+}
+
+* + p {
+  margin-top: 30px;
+  @media (min-width: $screen-sm-min) {
+    margin-top: 20px;
+  }
+  @media (min-width: $screen-lg-min) {
+    margin-top: 36px;
+  }
+}
+
+* + img {
+}
+
+* + .btn {
+  margin-top: 20px;
+  @media (min-width: $screen-sm-min) {
+    margin-top: 30px;
+  }
+  @media (min-width: $screen-md-min) {
+    margin-top: 40px;
+  }
+}
+
+* + .link {
+}
+
+* + .list {
+}
+
+* + .index-list {
+}
+
+* + .marked-list {
+}
+
+* + .ordered-list {
+}
+
+* + .inline-list {
+  margin-top: 33px;
+}
+
+* + .contact-info {
+}
+
+* + .small {
+}
+
+* + .btn-group {
+  margin-top: 52px;
+}
+
+* + .box,
+* + .box-xs,
+* + .box-sm,
+* + .box-md,
+* + .box-lg {
+}
+
+* + .row {
+  margin-top: 35px;
+  @media (min-width: $screen-md-min) {
+    margin-top: 50px;
+  }
+}
+
+* + .container {
+}
+
+* + .container-fluid {
+  margin-top: 66px;
+}
+
+* + .rd-mailform {
+  margin-top: 50px;
+}
+
+* + .offset {
+  &-1 {
+    @media (min-width: $screen-lg-min) {
+      margin-top: 70px;
+    }
+  }
+
+  &-2 {
+    @media (max-width: $screen-md-min - 1) {
+      margin-top: 45px !important;
+    }
+  }
+
+  &-3 {
+    margin-top: 30px;
+  }
+
+  &-4 {
+    @media (min-width: $screen-lg-min) {
+      margin-top: 43px;
+    }
+  }
+  &-5 {
+    @media (min-width: $screen-lg-min) {
+      margin-top: 37px;
+    }
+  }
+  &-6 {
+    @media (min-width: $screen-md-min) {
+      margin-top: -12px;
+    }
+  }
+  &-8 {
+    @media (min-width: $screen-xs-min) and (max-width: $screen-sm-min - 1) {
+      margin-top: 30px !important;
+    }
+  }
+  &-9 {
+    @media (min-width: $screen-md-min) and (max-width: $screen-lg-min - 1) {
+      margin-top: 30px !important;
+    }
+  }
+
+
+}
+
+.offset-7 {
+  @media (min-width: $screen-lg-min) {
+    margin-top: 12px;
+  }
+}
+
+.offset-10 {
+  @media (min-width: $screen-md-min) and (max-width: $screen-lg-min - 1) {
+    margin-bottom: -1px;
+  }
+}
+
+* + time {
+}
+
+h3 + p {
+  margin-top: 20px;
+}
+
+h5 + p {
+  margin-top: 8px;
+  @media (min-width: $screen-sm-min) {
+    margin-top: 16px;
+  }
+}
+
+.icon + h5 {
+  margin-top: 5px;
+  @media (min-width: $screen-sm-min) {
+    margin-top: 10px;
+  }
+  @media (min-width: $screen-md-min) {
+    margin-top: 31px;
+  }
+}
+
+h1 + p + .btn,
+h3 + p + .btn {
+  @media (min-width: $screen-md-min) {
+    margin-top: 55px;
+  }
+}
+
+p + .marked-list {
+  margin-top: 15px;
+  @media (min-width: $screen-sm-min) {
+    margin-top: 25px;
+  }
+  @media (min-width: $screen-md-min) {
+    margin-top: 30px;
+  }
+}
+
+p + p {
+  margin-top: 30px;
+}
+
+.box, .box-xs, .box-sm, .box-md, .box-lg {
+  & + .box,
+  & + .box-xs,
+  & + .box-sm,
+  & + .box-md,
+  & + .box-lg {
+  }
+}
+
+.flow-offset-1 {
+  @include make-flow-offset(30px);
+}
+
+.flow-offset-2 {
+  @include make-flow-offset(50px);
+}
+
+.flow-offset-3 {
+  @include make-flow-offset(40px);
+}
+
+.container {
+  .rd-navbar-search-results {
+    .result-item + .result-item {
+      margin-top: 30px;
+    }
+  }
+}
+
+/*
+* @subsection   Postfix
+* @description  Describes instant right margin classes
+*/
+
+.postfix-1 {
+}
+
+/*
+* @subsection   Prefix
+* @description  Describes instant left margin classes
+*/
+
+.preffix-1 {
+}
+
+/*
+* @subsection   Insets
+* @description  Describes instant padding classes
+*/
+
+.inset {
+  &-1 {
+    @media (min-width: $screen-sm-min) {
+      padding: 0 5%;
+    }
+  }
+
+  &-2 {
+    @media (min-width: $screen-sm-min) {
+      padding-top: 15px;
+    }
+  }
+
+  &-3 {
+    @media (min-width: $screen-lg-min) {
+      padding-right: 10%;
+    }
+  }
+  &-4 {
+    @media (min-width: $screen-sm-min) {
+      padding: 0 3%;
+    }
+  }
+  &-5 {
+    @media (min-width: $screen-sm-min) {
+      padding: 0 7%;
+    }
+  }
+  &-6 {
+    @media (min-width: $screen-md-min) {
+      padding-right: 3%;
+    }
+  }
+}
+
+/*
+* @subsection   Well
+* @description  Describes section inner indents
+*/
+
+.well {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+.well-1 {
+  @media (min-width: $screen-md-min) {
+    padding-top: 200px;
+    padding-bottom: 90px;
+  }
+
+}
+
+.well-2 {
+  padding-bottom: 0;
+  @media (min-width: $screen-md-min) {
+    padding-top: 90px;
+  }
+}
+
+.well-3 {
+  @media (min-width: $screen-md-min) {
+    padding-top: 90px;
+    padding-bottom: 110px;
+  }
+}
+
+.well-4 {
+  @media (min-width: $screen-md-min) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  @media (min-width: $screen-lg-min) {
+    padding-top: 180px;
+    padding-bottom: 180px;
+  }
+}
+
+.well-5 {
+  @media (min-width: $screen-md-min) {
+    padding-bottom: 105px;
+    padding-top: 90px;
+  }
+}
+
+.well-6 {
+  @media (min-width: $screen-md-min) {
+    padding-top: 90px;
+    padding-bottom: 0;
+  }
+}
+
+.well-7 {
+  @media (min-width: $screen-md-min) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+.well-8 {
+  @media (min-width: $screen-md-min) {
+    padding-top: 90px;
+    padding-bottom: 70px;
+  }
+  @media (min-width: $screen-lg-min) {
+    padding-bottom:  100px;
+  }
+}
+
+/*
+* @section      Helpers
+* @description  This section holds various helper classes for
+*               conditional page styling
+*/
+
+.round {
+  border-radius: 50%;
+}
+
+.md-right {
+  @media (min-width: $screen-md-min) {
+    float: right;
+  }
+}
+
+.md-left {
+  @media (min-width: $screen-md-min) {
+    float: left;
+  }
+}
+
+/*
+* @subsection   Colors
+*/
+
+html body .page { // Increases specificity to use with background helpers
+  .text-primary {
+    color: $primary;
+  }
+  .text-secondary {
+    color: $secondary;
+  }
+  .text-white {
+    color: $white;
+  }
+}
+
+/*
+* @subsection   Backgrounds
+*/
+.bg-primary {
+  background: $primary;
+  color: $white;
+  #{headings()} {
+    color: $white;
+  }
+  h3, .heading-3 {
+    color: $mine-shaft;
+  }
+
+  .btn-default {
+    color: $white;
+    background-color: $mine-shaft;
+    &:hover {
+      color: $secondary;
+      background-color: $white;
+    }
+  }
+
+  .btn-secondary {
+    &:hover {
+      color: $secondary;
+      background-color: $white;
+    }
+  }
+  .icon-default {
+    background-color: $white;
+  }
+}
+
+.bg-alabster {
+  background-color: $alabaster;
+  .icon-primary {
+    color: $primary;
+    background-color: $white;
+  }
+  .btn-default {
+    color: $mine-shaft;
+    background-color: $white;
+    &:hover {
+      color: $white;
+      background-color: $secondary;
+    }
+  }
+}
+
+.bg-image {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: $white;
+  #{headings()} {
+    color: $white;
+  }
+  &-1 {
+    background-image: url(../images/page-01_img03.jpg);
+  }
+  &-2 {
+    background-image: url(../images/page-02_img08.jpg);
+  }
+  &-3 {
+    background-image: url(../images/page-03_img14.jpg);
+  }
+  &-4 {
+    background-image: url(../images/page-04_img21.jpg);
+  }
+
+}
+
+.bg-fixed {
+  background-attachment: fixed;
+}
+
+.tablet,
+.mobile {
+  .bg-fixed {
+    background-attachment: scroll;
+  }
+}
+
+@import "components/_floating.scss";
+@import "components/_text-alignment.scss";
+@import "components/_text-styling.scss";
+@import "components/_responsive-utilities";
+@import "components/_animate.scss";
+
+/*
+* @section      Icon Fonts
+* @description  This section holds all icon fonts stored in template
+*/
+
+@import "components/_material-icons.scss";
+@import "components/_font-awesome.scss";
+
+/*
+* @section      Components
+* @description  This section holds all elements style declarations of template
+*/
+
+@import "components/_buttons.scss";
+@import "components/_icons.scss";
+
+/*
+ * @subsection   Box
+ */
+@import "includes/tm-box/_boxes.scss";
+
+.box {
+}
+
+/*
+* @subsection   Quote
+*/
+.quote {
+  q {
+    &:before {
+      content: '';
+      margin: 0 auto 10px auto;
+      display: block;
+      width: 53px;
+      height: 37px;
+      background-image: url(../images/page-01_img06.png);
+      background-repeat: no-repeat;
+      -webkit-background-size: cover; background-size: cover;
+      @media (min-width: $screen-sm-min) {
+        display: inline-block;
+        margin: 0 5px 0 0;
+      }
+    }
+  }
+
+  * + h5 {
+    margin-top: 0;
+    @media (min-width: $screen-sm-min) {
+      margin-top: 12px;
+    }
+  }
+}
+
+/*
+* @subsection   Image Wrap
+*/
+
+.image-wrap {
+
+  &-left {
+    @media (min-width: $screen-sm-min) {
+      float: right;
+      img {
+        max-width: none;
+      }
+    }
+    &-md {
+      float: none;
+      @media (min-width: $screen-md-min) {
+        float: right;
+        img { max-width: none;}
+      }
+    }
+  }
+
+  &-right {
+    @media (min-width: $screen-sm-min) {
+      float: left;
+      img { max-width: none;}
+    }
+  }
+  &-1 {
+    @media (min-width: $screen-sm-min) {
+      margin-top: -30px;
+    }
+    @media (min-width: $screen-md-min) {
+      margin-top: -124px;
+      margin-left: -28px;
+    }
+  }
+  &-2 {
+    @media (min-width: $screen-sm-min) {
+      margin-top: 5px;
+    }
+    @media (min-width: $screen-md-min) {
+      margin-top: -138px;
+      margin-right: 20px;
+    }
+    @media (min-width: $screen-lg-min) {
+      margin-right: 63px;
+    }
+  }
+  &-3 {
+    @media (min-width: $screen-lg-min) {
+      margin-right: 40px;
+    }
+  }
+}
+
+/*
+* @subsection   Pricing Box
+*/
+
+.pricing-box {
+}
+
+/*
+* @subsection   Breadcrumbs
+*/
+
+.breadcrumbs {
+}
+
+/*
+* @subsection   Post
+*/
+
+.post {
+}
+
+/*
+* @subsection   List
+*/
+
+.list {
+  li + li {
+    margin-top: 10px;
+  }
+}
+
+/*
+* @subsection   Inline List
+*/
+
+.inline-list {
+  @include transform(translateY(-15px));
+  margin-bottom: -15px;
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 5px;
+  }
+}
+
+/*
+* @subsection   Marked List
+*/
+
+.marked-list {
+  text-align: left;
+
+  > li {
+    position: relative;
+    padding-left: 20px;
+
+    &:before {
+      content: "\e315 ";
+      position: absolute;
+      left: -7px;
+      top: 38%;
+      @include transform(translateY(-50%));
+      font-weight: 400;
+      font-size: 24px;
+      font-family: "Material Icons", sans-serif;
+      color: $secondary;
+    }
+
+    & + li {
+      margin-top: 10px;
+    }
+    > a {
+      color: $mine-shaft;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    > a:hover {
+      color: $secondary;
+    }
+  }
+}
+
+/*
+* @subsection   Index List
+*/
+
+.index-list {
+  counter-reset: li;
+
+  > li {
+    > .index-list__counter {
+      &:before {
+        content: counter(li) '.';
+        counter-increment: li;
+        display: block;
+        margin: 0 auto;
+        width: 85px;
+        height: 85px;
+        font-size: 50px;
+        line-height: 85px;
+        color: $white;
+        text-align: center;
+        background-color: $primary;
+        border-radius: 50%;
+        @media (min-width: $screen-lg-min) {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // Sets offset between list rows
+  @include make-flow-offset(55px);
+}
+
+/*
+* @subsection   Ordered List
+*/
+
+.ordered-list {
+  > li {
+    padding-left: 20px;
+    list-style-type: decimal;
+  }
+}
+
+/*
+* @subsection   Terms  List
+*/
+
+.terms-list {
+  margin-top: 36px;
+  > dt + dd {
+    margin-top: 15px;
+  }
+
+  > dd + dt {
+    margin-top: 40px;
+  }
+
+  & + a {
+    display: inline-block;
+    margin-top: 35px;
+    font-size: 15px;
+    color: $secondary;
+    &:hover { color: $primary; }
+  }
+}
+
+/*
+* @subsection   Contact Info
+*/
+
+.contact-info {
+  p {
+  }
+
+  dl {
+    dt, dd {
+      display: inline-block;
+    }
+
+    dd {
+      vertical-align: text-bottom;
+    }
+
+    dt:after {
+      content: ':';
+    }
+
+    a:hover {
+      color: $primary;
+    }
+
+    &:not(:last-child) {
+      dt {
+        min-width: 140px;
+        @media (min-width: $screen-lg-min) {
+          min-width: 195px;
+        }
+      }
+    }
+
+    a[href^="mailto:#"] {
+      font-size: 15px;
+      color: $secondary;
+      text-decoration: underline;
+      @media (min-width: $screen-md-min) {
+        line-height: 2;
+      }
+      margin-left: 6px;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  * + dl {
+    margin-top: 13px;
+  }
+  dl + dl {
+    margin-top: -3px;
+  }
+}
+
+/*
+* @subsection   Counter
+*/
+
+.counter {
+}
+
+/*
+* @subsection   Thumb
+*/
+
+.thumb {
+  position: relative;
+  display: block;
+  line-height: 0;
+  width: 100%;
+  overflow: hidden;
+  > img {
+    width: 100%;
+  }
+
+  &__overlay {
+
+    > * {
+      vertical-align: middle;
+      @include transform(translateY(30px));
+      transition: .3s all ease;
+    }
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, 100%));
+      display: inline-block;
+      color: $white;
+      transition: .3s ease all;
+      opacity: 0;
+      font-size: 50px;
+      @media (min-width: $screen-sm-min) {
+        font-size: 60px;
+      }
+      @media (min-width: $screen-md-min) {
+        font-size: 65px;
+      }
+      @media (min-width: $screen-lg-min) {
+        font-size: 72px;
+      }
+    }
+  }
+
+  &:hover {
+    .thumb__overlay {
+      &:before {
+        @include transform(translate(-50%, -50%));
+        opacity: 1;
+      }
+      > * {
+        @include transform(translateY(0));
+      }
+    }
+  }
+}
+
+/*
+* @subsection   Link
+*/
+
+.link {
+  display: inline-block;
+}
+
+/*
+* @subsection   Video
+*/
+
+.video {
+  position: relative;
+  padding-bottom: percentage(340 / 570); // percentage( Height / Width ) on PSD
+
+  > iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*
+* @section      Extensions
+* @description  This section holds some of style declarations for necessary
+*               scripts
+*/
+
+@import "extensions/_rd-navbar.scss";
+@import "extensions/_rd-mailform.scss";
+@import "extensions/_rd-google-map.scss";
+@import "extensions/_rd-parallax.scss";
+@import "extensions/_magnific-popup.scss";
+@import "extensions/_ui-to-top.scss";
+@import "extensions/_responsive-tabs.scss";
+
+/*
+* @section      Page Header
+* @description  This section holds specific style redeclarations for some
+*               of common elements in page header
+*/
+
+.page-header {
+  color: $header-color;
+  background-color: $header-bg;
+  .header {
+    @media (min-width: $screen-md-min) {
+      background-image: url(../images/bg-image-01.jpg);
+      background-position: center -190%;
+    }
+    @media (min-width: $screen-lg-min) {
+      padding-top: 100px;
+      padding-bottom: 75px;
+    }
+    @media (min-width: 1281px) {
+      height: calc(100vh - 70px);
+      background-position: center top;
+    }
+    background-repeat: no-repeat;
+    -webkit-background-size: cover; background-size: cover;
+  }
+
+  &.header-1 {
+    .rd-navbar {
+      box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.11);
+    }
+  }
+}
+
+/*
+* @section      Page Content
+* @description  This section holds specific style redeclarations for some
+*               of common elements in page content
+*/
+
+.page-content {
+  .desktop & {
+    min-height: 100vh;
+  }
+}
+
+/*
+* @section      Page Footer
+* @description  This section holds specific style redeclarations for some
+*               of common elements in page footer
+*/
+
+.page-footer {
+  &-well {
+    padding-top: 40px;
+    @media (min-width: $screen-lg-min) {
+      padding-top: 50px;
+    }
+  }
+  padding-top: 85px;
+  padding-bottom: 90px;
+  color: $footer-color;
+  background-color: $footer-bg;
+  background-image: url("../images/page-01_img06.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover; background-size: cover;
+
+
+}
+
+.copyright {
+  font-size: 12px;
+  a:hover { text-decoration: underline; }
+}

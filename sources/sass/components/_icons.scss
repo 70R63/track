@@ -1,0 +1,90 @@
+/*
+* @subsection   Icons
+*/
+
+$icon-xs-size: 48px;
+$icon-xs-fz: 22px;
+
+$icon-sm-size: 50px;
+$icon-sm-fz: 24px;
+
+$icon-md-size: 83px;
+$icon-md-fz: 35px;
+
+$icon-lg-size: 65px;
+$icon-lg-fz: 36px;
+
+$icon-xl-size: 131px;
+$icon-xl-fz: 65px;
+
+// Icon General Styles
+.icon {
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: none;
+}
+
+// Icon Sizing Styles
+.icon-xs {
+  width: $icon-xs-size;
+  height: $icon-xs-size;
+  line-height: $icon-xs-size;
+  font-size: $icon-xs-fz;
+}
+
+.icon-sm {
+  width: $icon-sm-size;
+  height: $icon-sm-size;
+  line-height: $icon-sm-size - 4;
+  font-size: $icon-sm-fz;
+}
+
+.icon-md {
+  width: $icon-md-size;
+  height: $icon-md-size;
+  line-height: $icon-md-size - 4;
+  font-size: $icon-md-fz;
+}
+
+.icon-lg {
+  width: $icon-lg-size;
+  height: $icon-lg-size;
+  line-height: $icon-lg-size - 4;
+  font-size: $icon-lg-fz;
+}
+
+.icon-xl {
+  width: $icon-xl-size;
+  height: $icon-xl-size;
+  line-height: $icon-xl-size - 4;
+  font-size: $icon-xl-fz;
+}
+
+// Icon Appearance Styles
+.icon-default {
+  color: $pale-slate;
+  background-color: $alabaster;
+}
+
+.icon-primary {
+  color: $primary;
+  background-color: $alabaster;
+}
+
+.icon-alabster {
+  color: $primary;
+  background-color: $white;
+}
+
+a {
+  &.icon-default:hover {
+    color: $black-haze;
+    background-color: $mine-shaft;
+  }
+
+  &.icon-primary:hover {
+  }
+}
+
+

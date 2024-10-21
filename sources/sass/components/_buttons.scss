@@ -1,0 +1,82 @@
+// Button General Styles
+.btn {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.2;
+  white-space: nowrap;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 30px;
+  font-weight: 700;
+  -webkit-box-shadow: -6px 11px 43px 0px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow:    -6px 11px 43px 0px rgba(0, 0, 0, 0.06);
+  box-shadow:         -6px 11px 43px 0px rgba(0, 0, 0, 0.06);
+}
+
+// Button Layout Styles
+.btn-xs {
+}
+
+.btn-sm {
+  font-size: 14px;
+  padding: 16px 40px;
+}
+
+.btn-md {
+  font-size: 16px;
+  padding: 19px 50px;
+}
+
+.btn-lg {
+  font-size: 16px;
+  padding: 19px 63px;
+}
+
+.btn-xl {
+}
+
+// Button Appearance Styles
+.btn-default {
+  color: $mine-shaft;
+  background-color: $white;
+  &:hover {
+    color: $white;
+    background-color: $secondary;
+  }
+}
+
+.btn-primary {
+  color: $white;
+  background-color: $primary;
+  &:hover {
+    color: $white;
+    background-color: $secondary;
+  }
+}
+
+.btn-secondary {
+  color: $white;
+  background-color: $secondary;
+
+  &:hover {
+    color: $white;
+    background-color: $primary;
+  }
+}
+
+.btn-group {
+  @include transform(translateY(-30px));
+  margin-bottom: -30px;
+  margin-left: -20px;
+
+  > .btn {
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,60 @@
+/*
+* Static Layout
+*/
+
+$navbar-static-nav-indent: 30px;
+
+$navbar-static-nav-color: $navbar-nav-color;
+$navbar-static-nav-background: $navbar-nav-background;
+$navbar-static-nav-hover-color: $navbar-nav-hover-color;
+$navbar-static-nav-hover-background: $navbar-nav-hover-background;
+$navbar-static-nav-active-color: $navbar-nav-active-color;
+$navbar-static-nav-active-background: $navbar-nav-active-background;
+
+.rd-navbar-static {
+  display: block;
+
+  .rd-navbar-inner {
+    @include flexbox;
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    @include align-items(center);
+    height: 80px;
+    min-height: 80px;
+  }
+
+  .rd-navbar-nav {
+    margin-top: 8px;
+
+    @media (min-width: $screen-lg-min) {
+      margin-left: -181px;
+    }
+
+    > li {
+      display: inline-block;
+      margin-left: 15px;
+      @media (min-width: $screen-lg-min) {
+        margin-left: 23px;
+      }
+    }
+  }
+
+  // RD Navbar States
+  .rd-navbar-static--visible {
+    display: block;
+  }
+
+  .rd-navbar-static--hidden {
+    display: none;
+  }
+
+  &.rd-navbar--is-stuck.rd-navbar--is-clone {
+    height: 70px;
+    max-height: 70px;
+
+    .rd-navbar-brand { margin-top: -10px; }
+    .rd-navbar-nav { margin-top: -6px; }
+    .log { margin-top: -8.5px; }
+  }
+}
+
